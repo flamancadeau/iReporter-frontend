@@ -49,7 +49,7 @@ export default function AdminDashboard() {
     setLoading(true);
     try {
       const response = await axios.get<{ reports: Report[] }>(
-        "http://localhost:3000/reports"
+        "https://ireporter-backend-production.up.railway.app/reports"
       );
       setReportsData(response.data.reports);
       setError(null);
@@ -65,7 +65,7 @@ export default function AdminDashboard() {
 
   const handleStatusChange = async (id: number, newStatus: ReportStatus) => {
     try {
-      const response = await axios.put(`http://localhost:3000/report/${id}`, {
+      const response = await axios.put(`https://ireporter-backend-production.up.railway.app/report/${id}`, {
         status: newStatus,
       });
       if (response.status === 200) {

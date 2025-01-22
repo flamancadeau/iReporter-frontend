@@ -72,7 +72,7 @@ export default function ReportSystem() {
       setLoading(true);
       try {
         const response = await axios.get<{ reports: Report[] }>(
-          `http://localhost:3000/report/${userId}`
+          `https://ireporter-backend-production.up.railway.app/report/${userId}`
         );
         setReports(response.data.reports);
       } catch (err) {
@@ -92,7 +92,7 @@ export default function ReportSystem() {
 
   const handleDeleteReport = async (id: string) => {
     try {
-      const response = await axios.delete(`http://localhost:3000/report/${id}`);
+      const response = await axios.delete(`https://ireporter-backend-production.up.railway.app/report/${id}`);
 
       if (response.status === 200) {
         setReports((prevReports) =>
@@ -119,7 +119,7 @@ export default function ReportSystem() {
       }
 
       const response = await axios.patch(
-        `http://localhost:3000/report/${editingReport.id}`,
+        `https://ireporter-backend-production.up.railway.app/report/${editingReport.id}`,
         formData
       );
 
@@ -166,7 +166,7 @@ export default function ReportSystem() {
         };
 
         const response = await axios.post(
-          "http://localhost:3000/report",
+          "https://ireporter-backend-production.up.railway.app/report",
           requestBody
         );
 
