@@ -1,50 +1,79 @@
-# React + TypeScript + Vite
+# iReporter Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The frontend application for iReporter - a platform that enables citizens to report corruption incidents and request government intervention. Built with React, TypeScript, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Modern, responsive user interface
+- Real-time form validation
+- Interactive maps for location selection
+- Progress tracking for submitted reports
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React  TypeScript
+- React Router for navigation
+- Tailwind CSS for styling
+- React Query for API data fetching
+- React Hook Form for form handling
 
-- Configure the top-level `parserOptions` property like this:
+## Prerequisites
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Node.js
+- npm 
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/ireporter-frontend.git
+cd ireporter-frontend
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
 ```
+
+3. Create a `.env` file in the root directory:
+```env
+
+4. Start the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm test` - Run tests
+
+
+## Development Guidelines
+
+### Component Structure
+- Use functional components with TypeScript
+- Implement proper prop typing
+
+### State Management
+- Implement React Query for server state
+- Use local state for component-specific data
+
+### Styling
+- Use Tailwind CSS
+
+
+
+## Deployment
+
+1. Build the application:
+```bash
+npm run build
+```
+
+
